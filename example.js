@@ -2,15 +2,15 @@ var h5 = require('./lib/index.js');
 
 require('./functions.js');
 
-var googleTest =
+var example =
   h5.action('http.request', { url: 'http://www.imdb.com/title/tt0110912/' })
     .action('html.extract', { selectors: { title: 'h1.header > span[itemprop="name"]', year: 'h1.header > span > a' } })
     .save();
 
-googleTest.print();
+example.print();
 
-googleTest
-  .run()
+example
+  .run({url: 'http://www.imdb.com/title/tt0137523/'})
   .then(function(result) {
     console.log(result);
   }, function(err) {
