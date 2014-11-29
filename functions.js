@@ -17,7 +17,7 @@ var httpRequest = function(args) {
           body: body
         });
       }
-    })
+    });
   });
 };
 
@@ -29,7 +29,7 @@ var htmlExtract = function(args) {
     var results = {};
     for (var key in selectors) {
       var selector = selectors[key];
-      results[key] = $(selector).text()
+      results[key] = $(selector).text();
     }
     resolve(results);
   });
