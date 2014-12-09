@@ -1,6 +1,6 @@
 # h5js
 
-Checkout example.js for example
+Checkout `example.js` in examples directory.
 
 ```JavaScript
 var h5 = require('h5');

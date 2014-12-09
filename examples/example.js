@@ -1,4 +1,4 @@
-var h5 = require('./lib/index.js');
+var h5 = require('../lib/index.js');
 
 require('./functions.js');
 
