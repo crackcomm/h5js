@@ -24,7 +24,7 @@ var httpRequest = function(args) {
 var htmlExtract = function(args) {
   var body = args.body;
   var selectors = args.selectors;
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var $ = cheerio.load(body, { normalizeWhitespace: true });
     var results = {};
     for (var key in selectors) {
