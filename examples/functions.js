@@ -2,7 +2,7 @@
  * Basic functions for testing purposes
  */
 
-var h5 = require('./lib/index.js');
+var h5 = require('../lib/index.js');
 var Promise = require('promise');
 var request = require('request');
 var cheerio = require('cheerio');
