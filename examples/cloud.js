@@ -1,7 +1,7 @@
 var h5 = require('../lib');
 
 h5.debug(true);
-h5.cloud.set('http://127.0.0.1:6090/');
+h5.cloud.set('https://radiant-harbor-8309.herokuapp.com/');
 
 require('./functions.js');
 
