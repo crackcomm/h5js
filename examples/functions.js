@@ -9,7 +9,7 @@ var cheerio = require('cheerio');
 
 var httpRequest = function(args) {
   return new Promise(function(resolve, reject) {
-    request({url: args.url}, function(err, response, body) {
+    request(args, function(err, response, body) {
       if (err) {
         reject(err);
       } else {
@@ -22,11 +22,10 @@ var httpRequest = function(args) {
 };
 
 var htmlExtract = function(args) {
-  var body = args.body;
-  var selectors = args.selectors;
   return new Promise(function(resolve) {
-    var $ = cheerio.load(body, { normalizeWhitespace: true });
+    var $ = cheerio.load(args.body, { normalizeWhitespace: true });
     var results = {};
+    var selectors = args.selectors;
     for (var key in selectors) {
       var selector = selectors[key];
       results[key] = $(selector).text();
