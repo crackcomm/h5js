@@ -30,12 +30,13 @@ h5.cloud.set('https://radiant-harbor-8309.herokuapp.com/');
 example.
   save().
   then(function() {
-    example.
-      run({url: 'http://www.imdb.com/title/tt0137523/'}, true).
-      then(function(result) {
-        console.log(result);
-      }, function(err) {
-        console.log('Error:', err);
-      });
+    return example.run({url: 'http://www.imdb.com/title/tt0137523/'}, true);
+  }).
+  then(function(result) {
+    console.log('result:', result);
+  }).
+  catch(function(err) {
+    console.log('Cloud error:', err);
   });
+
 ```
