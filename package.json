@@ -11,7 +11,8 @@
     "node-uuid": "^1.4.1",
     "object-assign": "^2.0.0",
     "request": "^2.49.0",
-    "promise": "^6.0.1"
+    "promise": "^6.0.1",
+    "debug": "^2.1.0"
   },
   "devDependencies": {
     "cheerio": "^0.18.0"
