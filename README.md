@@ -22,6 +22,32 @@ example.
   });
 ```
 
+Example action in JSON form:
+
+```JSON
+{
+  "id": "4627ca64-a168-40f6-9389-cf4fa75b6da2",
+  "function": {
+    "name": "http.request",
+    "args": {
+      "url": "http://www.imdb.com/title/tt0110912/"
+    }
+  },
+  "next": {
+    "id": "875d846a-635f-4567-adc9-46ca61b4ef12",
+    "function": {
+      "name": "html.extract",
+      "args": {
+        "selectors": {
+          "title": "h1.header > span[itemprop=\"name\"]",
+          "year": "h1.header > span > a"
+        }
+      }
+    }
+  }
+}
+```
+
 Saving action and running in [cloud](https://github.com/crackcomm/h5jserver)
 
 ```JavaScript
