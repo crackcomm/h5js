@@ -4,6 +4,27 @@ Distributed computing with JSON.
 
 Checkout `example.js` and `cloud.js` in examples directory.
 
+## Idea
+
+It's more about idea rather than a working library.
+
+### HTML instead of JSON
+
+Another cool idea to think about:
+
+Stop treating HTML as a second class citizen:
+
+```html
+<http.request url="http://www.filmweb.pl/Pulp.Fiction">
+  <html.extract>
+    <title selector="h1.header > span[itemprop='name']" />
+    <year selector="h1.header > span > a" />
+  </html.extract>
+</http.request>
+```
+
+## Usage
+
 ```JavaScript
 var h5 = require('h5');
 
