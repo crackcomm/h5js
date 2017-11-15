@@ -1,5 +1,7 @@
 # h5js
 
+> **NOTE**: See [ipfn](https://github.com/ipfn/ipfn) project.
+
 Distributed computing with JSON.
 
 Checkout `example.js` and `cloud.js` in examples directory.
